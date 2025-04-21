@@ -1,0 +1,39 @@
+<% layout("/layouts/boilerplate")%>
+<style>
+  #dashUsers{
+      height: 100vh;
+  }
+  .see{
+    padding: 2px 4px;
+  }
+  h4{
+    margin: 30px 0;
+  }
+</style>
+<div id="dashUsers">
+
+<h4>Available books for selling</h4>
+<table>
+  <tr>
+    <th>Books</th>
+    <th>Branch</th>
+    <th>Semester</th>
+    <th></th>
+  </tr>
+  
+  <%  for(let listing of allListings){ %>
+    <tr>
+      <form action="/bookswap/<%=listing._id%>">
+        <td><%=listing.description %></td>
+        <td><%=listing.branch%></td>
+        <td><%=listing.sem%></td>
+        <td><button class="add-btn see">See Details</button></td>
+      </form>
+      
+      </tr>
+  <%  } %>
+</table>
+</div>
+
+
+

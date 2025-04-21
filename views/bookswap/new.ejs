@@ -1,0 +1,121 @@
+<% layout("/layouts/boilerplate")%>
+<style>
+    p{
+        font-size: 0.9em;
+    }
+</style>
+    <div class="row mt-3">
+        <div class="col-9 offset-1">
+            <h4 style="margin-bottom: 2rem;">Create new listing</h4>
+        <form method="POST" action="/bookswap" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div class="mb-4">
+            <label for="fullname" class="form-label"><b>Full Name</b></label>
+            <input name="fullname" id="fullname" type="text" placeholder="aria" class="form-control" required>
+            <div class="valid-feedback">looks good!</div>
+            <div class="invalid-feedback">Please enter your name!</div>
+        </div>
+        <div class="mb-4">
+            <label for="contact" class="form-label"><b>Contact No.</b> </label>
+            <input name="contact" id="contact" type="text"  pattern="^\d{10}$" maxlength="10" placeholder="9999999999" class="form-control" required>
+            <div class="invalid-feedback">Enter valid contact number!</div>
+        </div>
+        <div class="row">
+            <div class="mb-4 col-md-4">
+                <label for="branch" class="form-label"><b>Branch</b></label>
+                <select name="branch" class="form-control" required>
+                    <option value="">Select Branch</option>
+                    <option value="aids">AI & DS</option>
+                    <option value="comp">Computer</option>
+                    <option value="it">IT</option>
+                    <option value="entc">ENTC</option>
+                    <option value="mec">Mechanical</option>
+                    <option value="elec">Electrical</option>
+                </select>
+                <div class="invalid-feedback">Select your branch name</div>
+
+            </div>
+            <div class="mb-4 col-md-8">
+                <label for="sem" class="form-label"><b>Semester</b></label>
+            <select name="sem" id="sem" class="form-control" required>
+                <option value="">Select Semester</option>
+                <option value="sem1">1</option>
+                <option value="sem2">2</option>
+                <option value="sem3">3</option>
+                <option value="sem4">4</option>
+                <option value="sem5">5</option>
+                <option value="sem6">6</option>
+                <option value="sem7">7</option>
+                <option value="sem8">8</option>
+               
+              </select>
+                <div class="invalid-feedback">Select the semester</div>
+            </div>
+        
+        </div>
+        <!-- <div class="mb-4">
+            <label for="description" class="form-label"><b>Subject and Price Details</b></label>
+            <table>
+                <tr>
+                    <th>Subject</th>
+                    <th>Original Price</th>
+                    <th>Selling Price</th>
+                </tr>
+                <tr>
+                    <td><textarea name="bookswap[description]"cols="20" rows="2" class="form-control" required></textarea><div class="invalid-feedback"></div></td>
+                    <td><textarea name="bookswap[originalP]" cols="20" rows="2" class="form-control" required></textarea><div class="invalid-feedback"></div></td>
+                    <td><textarea  name="bookswap[decidedP]"cols="20" rows="2" class="form-control" required></textarea><div class="invalid-feedback"></div></td>
+                </tr>
+            </table>
+        </div> -->
+        <div class="mb-4">
+            <label class="form-label"><b>Book Details</b></label>
+          
+            <table id="bookTable" class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Book Name</th>
+                  <th>Original Price</th>
+                  <th>Selling Price</th>
+                  <th>Front Page Image</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="bookTableBody">
+                <!-- Initial Row -->
+                <tr>
+                  <td>
+                    <input type="text" name="bookswap[0][description]" class="form-control" required>
+                  </td>
+                  <td>
+                    <input type="number" min="1" name="bookswap[0][originalP]" class="form-control" required>
+                  </td>
+                  <td>
+                    <input type="number" min="1" name="bookswap[0][decidedP]" class="form-control" required>
+                  </td>
+                  <td>
+                    <input type="file" name="bookswap[0][image]" accept="image/*" class="form-control" required />
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-danger" onclick="removeRow(this)">−</button>
+                  </td>
+                </tr>
+          
+                <!-- Add Button Row -->
+                <tr>
+                  <td colspan="5" class="text-end">
+                    <button type="button" class="btn btn-outline-dark" onclick="addRow()">＋ Add One More</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+        <!-- <div class="mb-4">
+            <label for="image" class="form-label"><b>Upload Front Page Picture of the Book</b></label>
+            <input name="bookswap[image]" id="image" type="file" class="form-control"  multiple required>
+        </div> -->
+        <button class="btn btn-dark add-btn mt-3">Confirm and Post</button>
+    </form>
+</div>
+</div>
+

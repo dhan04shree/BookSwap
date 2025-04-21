@@ -1,0 +1,32 @@
+
+<% layout("/layouts/boilerplate")%>
+<style>
+    .showImgDiv{
+        display: inline-block;
+    }
+</style>
+    <div class="showdiv">
+        <div class="showImgDiv">
+            <img src="<%=listing.image.url%>" height="370px" alt="listing_image">
+        </div>
+        <div class="mt-4 showContent">
+            
+            <p class=""><b>Seller Name</b>&nbsp;&nbsp;&nbsp;<%=listing.fullname%> </p>
+                <p class="t"><b>Branch</b> &nbsp;&nbsp;&nbsp;<%=listing.branch%> </p>
+                <p class=""><b>Semester</b>&nbsp;&nbsp;&nbsp;<%=listing.sem%> </p>
+                <p class=""><b>Contact Details</b> &nbsp;&nbsp;&nbsp; <%=listing.contact %> </p>      
+                <table>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Original Price</th>
+                        <th>Selling Price</th>
+                    </tr>
+                  <tr>
+                        <td><%=listing.description%></td>
+                        <td><%=listing.originalP%></td>
+                        <td><%=listing.decidedP%></td>
+                    </tr>
+    
+                </table>
+        </div>
+        </div>

@@ -1,0 +1,101 @@
+<% layout("/layouts/boilerplate")%>
+<style>
+  .slide-icons{
+    display: flex;
+  }
+  .container{
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+  .sec1{
+    padding: 30px;
+  }
+  body{
+    height: 100vh;
+    background-image:url("https://www.pvgcoet.ac.in/wp-content/uploads/2019/06/pvgcoet-pune-banner.jpg");
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+}
+.head p{
+  padding-top: 10px;
+  padding-bottom: 10px;
+ opacity: 0.7;
+}
+.mainbody{
+    background-color: #0000008e;
+    color: white;
+    border-radius: 5px;
+    width: 100%;
+    padding-bottom: 50px;
+    /* height: 100vh; */
+}
+
+form{
+  display: inline;
+}
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 2rem;
+    margin-top: 90px;
+    color: #000;
+    margin-bottom: -20px;
+  }
+  .feature-box {
+  /* background-color: #ffffff96; */
+    background-color: rgba(255, 255, 255, 0.881);
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+    padding: 1.5rem;
+    /* width: 30%; */
+    width: 350px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.head{
+  width: 600px;
+  padding-top:150px ;
+  padding-left: 100px;
+}
+@media(max-width:440px){
+    .head{
+  width: 100%;
+  padding: 0px;
+  padding-top: 2rem;
+  overflow: hidden;
+}
+}
+
+</style>
+
+<div class="sec1" data-aos="fade-up">
+  <div class="head">
+
+    <h2>Second Hand Bookstore Platform for Engineering Students</h2>
+    <p>Connecting engineering students to buy and sell textbook directly. BookSwap serves as the perfect platform for juniors and seniors to exchange second-hand books, making the process quick, easy, and affordable. Whether you're looking for a specific book or want to list your own, BookSwap has you covered!</p>
+    <form action="/bookswap/buy"><button class="add-btn">Buy a book</button></form>&nbsp;&nbsp;&nbsp;&nbsp;
+    <form action="/bookswap/new"><button class="add-btn">Sell a book</button></form>
+  </div>
+</div>
+
+  <section class=" row features" data-aos="fade-up">
+      <div class="col-4 feature-box">
+          <h3>Browse Listings</h3>
+          <p>Search for the books you need from students in your own college.</p>
+      </div>
+
+      <div class="col-4 feature-box">
+          <h3>Sell Your Books</h3>
+          <p>List your old textbooks and help others by providing valuable resources.</p>
+      </div>
+
+      <div class="col-4 feature-box">
+          <h3>Direct Communication</h3>
+          <p>Get in touch with sellers directly via the contact details they provide.</p>
+      </div>
+  </section>
+
+<script>
+  AOS.init();
+</script>

@@ -1,0 +1,47 @@
+<% layout("/layouts/boilerplate")%>
+<style>
+    #buypage{
+        height: 100vh;
+    }
+    h4{
+        margin: 30px 0;
+    }
+
+</style>
+<h4 class="offset-2">Check Book Availability</h4>
+<div class="row mt-3" id="buypage">
+        <form action="/bookswap/buy" method="post" novalidate class="needs-validation" >
+        <div class="row">
+            <div class="mb-3 col-4 md-4 offset-2">
+                <label for="branch" class="form-label"><b>Branch</b></label>
+                <select name="bookswap[branch]" id="branch" class="form-control">
+                    <option value="">Select Branch</option>
+                <option value="aids">AI & DS</option>
+                <option value="comp">Computer</option>
+                <option value="it">IT</option>
+                <option value="entc">ENTC</option>
+                <option value="mec">Mechanical</option>
+                <option value="elec">Electrical</option>
+                </select>
+                <div class="invalid-feedback">Please select any one</div>
+            </div>
+            <div class="mb-3 col-4 md-8">
+                <label for="sem" class="form-label"><b>Semester</b></label>
+                <select name="bookswap[sem]" id="sem" class="form-control">
+                    <option value="">Select Semester</option>
+                    <option value="sem1">1</option>
+                    <option value="sem2">2</option>
+                    <option value="sem3">3</option>
+                    <option value="sem4">4</option>
+                    <option value="sem5">5</option>
+                    <option value="sem6">6</option>
+                    <option value="sem7">7</option>
+                    <option value="sem8">8</option>
+                   
+                  </select>
+                <div class="invalid-feedback">Please select a semester</div>
+            </div>
+        </div>
+        <button class="btn add-btn mt-3 offset-2">Check</button>
+            </form>
+    </div>

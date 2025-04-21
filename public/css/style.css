@@ -1,0 +1,126 @@
+body{
+    font-family: "Open Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+}
+table{
+    width: 100%;
+    font-size: 1em;
+}
+table tr{
+    height: 50px;
+}
+table th,table td{
+    border:1px solid #000;
+    padding-left: 20px;
+    /* text-align: center; */
+}
+table tr:nth-child(even){
+    background-color: #e4b8ff;
+}
+h3{
+    margin-bottom: 20px !important;
+}
+.container{
+    flex: 1;
+}
+/* Navbar */
+.navbar{
+    height:5rem;
+    background-color: rgba(255, 255, 255, 0.935);
+}
+@media (min-width : 432px){
+    .navbar{
+        padding-left: 3rem !important;
+        padding-right: 3rem !important;
+    }
+}
+.nav-link{
+    color: #222222 !important;
+}
+.f-info-links,.f-info-socials,.f-info-brand{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.f-info-socials i{
+    margin-right: 2rem;
+    font-size: 1.2rem;
+}
+.f-info-links a{
+    text-decoration: none;
+    color: #000;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+.f-info{
+    display: flex;
+    height: 10rem;
+    background-color: #d4d4d4;
+    flex-wrap: wrap;
+    justify-content:center;
+
+    /* position: fixed; */
+ /* text-align: center; */
+}
+.showdiv{
+    margin: 50px !important;
+    /* width: 40%; */
+}
+
+/* Cards */
+.listing-card{
+    border: none !important;
+    margin-bottom: 2rem;
+}
+.showContent{
+    padding-left: 30px;
+    display: inline-block;
+}
+
+/* new page */
+.add-btn,.edit-btn{
+    background-color: #7800c2 !important;
+    border: none !important;
+    /* width: 30%; */
+    margin-bottom: 10px;
+    color: white !important;
+    border-radius: 5px;
+    padding: 8px 10px;
+}
+.add-btn:hover{
+    background-color: #6d00b0 !important;
+}
+.btns{
+    display: flex;
+}
+.show-card{
+    padding-left: 0;
+    padding-right: 0;
+}
+@media (max-width:440px){
+    .form-check-reverse{
+        text-align:center !important;
+    } 
+    .show-rev{
+        width: 40vh !important;
+    }
+}
+.slide-icons i {
+    cursor: pointer;
+}
+.slide-icons{
+    align-items: center;
+}
+@media(max-width:766px){
+    .navbar-pad{
+        justify-content: space-around !important;
+    }
+    .navbar-collapse{
+        padding: 0 20px;
+    }
+}
