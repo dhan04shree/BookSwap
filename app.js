@@ -91,19 +91,6 @@ app.use((req,res,next)=>{
 app.use("/bookswap",bookswapRouter);
 app.use("/",userRouter);
 
-
-app.get("/admin-3gr8t1",async(req,res)=>{
-    const allUsers = await User.find({});
-    console.log(allUsers); 
-    res.render("bookswap/admindashboard.ejs",{allUsers});
-});
-app.delete("/deleteuser/:id",async(req,res)=>{
-    let {id} = req.params;
-    const desireduser = await User.findByIdAndDelete(id);
-    req.flash("error","User deleted permanently");
-    res.redirect("/bookswap");
-})
-
 app.all("*",(req,res,next)=>{
     next(new ExpressError(404,"Page not found!"));
 });
